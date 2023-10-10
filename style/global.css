@@ -1,0 +1,36 @@
+:root {
+  --primary-color: #458DCA;
+  --secondary-color: #8B4513;
+  --main-bg: #190D04;
+}
+
+@font-face {
+  font-family: 'BlackRose';
+  src: url('../assets/BlackRose-2Onld.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Jolly Lodger', cursive;
+}
+
+main {
+  width: 100%;
+  min-height: calc(100vh);
+
+  background-image: url("../assets/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  padding-top: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
