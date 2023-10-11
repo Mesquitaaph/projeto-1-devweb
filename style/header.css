@@ -16,6 +16,8 @@ header {
   color: var(--primary-color);
 
   background-color: var(--main-bg);
+
+  z-index: 100
 }
 
 header > a {

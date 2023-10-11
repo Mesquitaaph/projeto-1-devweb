@@ -31,16 +31,14 @@ const addNavbarListener = (elementName, pageElem) => {
     resetDisplay()
     pageElem.style['display'] = 'flex'
   });
-
-  // console.log(element);
 }
 
-// for(let i = 0; i < mainChildren.length; i++) {
-//   if(mainChildren[i].id !== 'Home') {
-//     mainChildren[i].style['display'] = 'none'
-//   }
+for(let i = 0; i < mainChildren.length; i++) {
+  if(mainChildren[i].id !== 'Home') {
+    mainChildren[i].style['display'] = 'none'
+  }
 
-//   addNavbarListener(mainChildren[i].id, mainChildren[i])
-// }
+  addNavbarListener(mainChildren[i].id, mainChildren[i])
+}
 
 

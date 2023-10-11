@@ -1,0 +1,72 @@
+#Home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 32px;
+}
+
+#Home .titleLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  gap: 16px;
+}
+
+#Home h1.title {
+  font-family: BlackRose;
+  font-size: 48px;
+}
+
+#Home .chamada {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#Home .textoChamada {
+  width: 80%;
+
+  font-size: 32px;
+  text-align: center;
+  z-index: 2;
+
+  background-image: url("../assets/old-paper.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10% 15%;
+
+  font-family: 'Kavivanar';
+
+  inline-size: 60%;
+}
+/* 
+#Home .fundo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  transform: translate(-50%);
+
+  z-index: 0;
+} */
+
+@media (max-width: 1115px) {
+  #Home .textoChamada {
+    padding: 10% 10%;
+
+    inline-size: 80%;
+  }
+}

@@ -17,19 +17,24 @@ body {
 
 main {
   width: 100%;
-  min-height: calc(100vh);
+
+  height: 100vh;
 
   background-image: url("../assets/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  padding-top: 80px;
+  padding-top: 40px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
+
+/* main > div {
+  transition: display .25s;
+} */
 
 a {
   text-decoration: none;
