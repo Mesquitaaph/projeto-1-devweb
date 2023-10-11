@@ -40,5 +40,3 @@ for(let i = 0; i < mainChildren.length; i++) {
 
   addNavbarListener(mainChildren[i].id, mainChildren[i])
 }
-
-
