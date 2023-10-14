@@ -1,0 +1,88 @@
+#Agenda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    gap: 32px;
+  }
+  
+  #Agenda .titleLogo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    gap: 16px;
+  }
+  
+  #Agenda h1.title {
+    font-family: BlackRose;
+    font-size: 48px;
+  }
+  #Agenda .gambiarra{
+      width: 100%;
+      height: 100%;
+  }
+
+  #Agenda .Eventinho {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-family: 'Kavivanar';
+    font-size: 36px;
+    flex-direction: column;
+  }
+
+  #Agenda .Background {
+    /*
+    width: 2295px;
+    height: 2100px;
+    */
+    width: 100%;
+    height: 2100px;
+  
+    z-index: 2;
+  
+    background-image: url("../assets/old-paper-vert.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+  
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr 3fr;
+    
+    /*justify-content: center;
+    align-items: center;*/
+  }
+
+  #Agenda .Evento {
+    height: 100%;
+    width: auto;
+    z-index: 3;
+  
+    background-image: url("../assets/Locais.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    /*
+    background-size: contain;
+    background-position: left;*/
+  }
+
+  
+
+  @media (max-width: 1800px) {
+    #Agenda .Background {
+      grid-template-columns: 2fr 2fr 2fr 2fr;
+    }
+  }
+  @media (max-width: 1500px) {
+    #Agenda .Background {
+      grid-template-columns: 1fr 2fr 2fr 1fr;
+    }
+  }
+
+  
