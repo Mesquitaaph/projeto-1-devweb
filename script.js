@@ -14,9 +14,9 @@ const resetNavbarColor = () => {
 const resetDisplay = (addlistener) => {
   for(let i = 0; i < mainChildren.length; i++) {
     if(mainChildren[i].id !== 'elementName')
-    mainChildren[i].style['display'] = 'none'
+      mainChildren[i].style['display'] = 'none';
 
-    if(addlistener !== undefined) addlistener(mainChildren[i].id, mainChildren[i])
+    if(addlistener !== undefined) addlistener(mainChildren[i].id, mainChildren[i]);
   }
 }
 
@@ -24,19 +24,42 @@ const addNavbarListener = (elementName, pageElem) => {
   let element = document.querySelector(`header .${elementName}`);
 
   element.addEventListener('click', () => {
-    resetNavbarColor()
+    resetNavbarColor();
 
-    element.style['color'] = `${secondaryColor}`
+    element.style['color'] = `${secondaryColor}`;
 
-    resetDisplay()
-    pageElem.style['display'] = 'flex'
+    resetDisplay();
+    pageElem.style['display'] = 'flex';
+
+    let navBar = document.getElementsByTagName('nav').item(0);
+
+    if(navBar.style['transform'] == 'translateX(0px)')
+      navBar.style['transform'] = 'translateX(-500px)';
+
+    let titleLogoHeader = document.querySelector('.titleLogoHeader');
+    if(elementName !== 'Home') {
+      titleLogoHeader.style['display'] = 'flex';
+    } else {
+      titleLogoHeader.style['display'] = 'none';
+    }
   });
 }
 
 for(let i = 0; i < mainChildren.length; i++) {
   if(mainChildren[i].id !== 'Home') {
-    mainChildren[i].style['display'] = 'none'
+    mainChildren[i].style['display'] = 'none';
   }
 
-  addNavbarListener(mainChildren[i].id, mainChildren[i])
+  addNavbarListener(mainChildren[i].id, mainChildren[i]);
 }
+
+
+let openNavbar = document.querySelector('#openNavbar');
+openNavbar.addEventListener('click', () => {
+  let navBar = document.getElementsByTagName('nav').item(0);
+
+  if(navBar.style['transform'] == 'translateX(0px)')
+    navBar.style['transform'] = 'translateX(-500px)';
+  else 
+    navBar.style['transform'] = 'translateX(0px)';
+});

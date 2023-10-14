@@ -52,21 +52,44 @@
 
   inline-size: 60%;
 }
-/* 
-#Home .fundo {
-  position: absolute;
-  top: 0;
-  left: 50%;
-
-  transform: translate(-50%);
-
-  z-index: 0;
-} */
 
 @media (max-width: 1115px) {
   #Home .textoChamada {
     padding: 10% 10%;
 
     inline-size: 80%;
+  }
+}
+
+@media (max-width: 950px) {
+  #Home .textoChamada {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 770px) {
+  #Home .titleLogo {
+    padding: 0 16px;
+  }
+
+  #Home .titleLogo > img {
+    height: 100px;
+  }
+
+  #Home h1.title {
+    font-family: BlackRose;
+    font-size: 36px;
+
+    width: 204px;
+  }
+
+  #Home .textoChamada {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 690px) {
+  #Home .textoChamada {
+    background-size: cover;
   }
 }
