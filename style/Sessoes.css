@@ -1,4 +1,5 @@
 #Sessoes {
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -36,16 +37,9 @@
   background-color: var(--secondary-color);
 }
 
-/* #Sessoes .filtro-botao.inactive {
-  background-color: transparent; 
-  color: black; 
-  border: 2px solid black; 
-} */
-
 #Sessoes .sessoesContainer {
   width: 850px;
   height: 80%;
-  overflow-y: scroll;
 }
 
 #Sessoes .sessaoContainer {
@@ -55,7 +49,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
 }
 
 #Sessoes .sessaoContainer:last-child {
@@ -73,4 +67,32 @@
   font-weight: bold;
   font-family: BlackRose;
   font-size: 26px;
+}
+
+@media (max-width: 720px) {
+  #Sessoes {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  #Sessoes .filtro-botoes {
+    width: 100%;
+  }
+
+  #Sessoes .filtro-botao {
+    font-size: 21px;
+  }
+
+  #Sessoes .sessaoContainer {
+    flex-direction: column-reverse;
+  }
+
+  #Sessoes .sessaoInfo {
+    font-size: 19px;
+  }
+  
+  #Sessoes .fonteNegrito {
+    font-size: 21px;
+  }
+  
 }
