@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style/footer.css">
 
     <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/ingressos.css">
+    <link rel="stylesheet" href="style/faleconosco.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,13 +73,47 @@
       </div>
 
       <div id="Ingressos">
-        <span style="color: var(--primary); font-family: BlackRose;">Ingressos</span>
+
+        <h1 class="titulo">
+          INGRESSOS 2023<br>
+        </h1>
+        <h3 class="textoChamada">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas, massa in aliquam tristique, libero nulla placerat tortor, sit amet eleifend velit lorem ut nisl. Mauris at libero ut eros suscipit euismod. Pellentesque pharetra tristique hendrerit. Quisque odio dolor, pretium et mi nec, aliquet luctus felis. Quisque nec est in nunc commodo maximus quis et leo. Maecenas rhoncus finibus ipsum, a ullamcorper neque commodo eu. Ut pharetra quis lorem eu tincidunt. Praesent dolor velit, convallis mattis purus vel, aliquam tristique tellus. Curabitur at justo non massa varius rhoncus. Fusce ac congue metus, non semper mauris. Phasellus erat lacus, maximus quis.<br>
+        </h3>
       </div>
 
       <div id="FaleConosco">
-        <textarea ></textarea>
-        <img src="./assets/dashed-rectangle.svg" height="160">
-        <span style="color: var(--primary); font-family: BlackRose;">Fale Conosco</span>
+        <h1 class="textoChamada">
+          FORMULÁRIO DE CONTATO<br>
+        </h1>
+        <h2 class="textoChamada">
+          Dúvidas, sugestões ou reclamações? Não deixe de entrar em contato com a gente.<br>
+        </h2>
+        <div class="jornal">
+          <div class="formulario">
+            <form>
+              <div class="label">
+                <label for="nome">NOME COMPLETO</label>
+                <input type="text" id="nome" name="nome" required="true" class="caixas">
+              </div>
+              <div class="label">
+                <label for="telefone">TELEFONE</label>
+                <input type="number" id="telefone" name="telefone" required="true" class="caixas">
+              </div>
+              <div class="label">
+                <label for="email" >E-MAIL</label>
+                <input type="email" id="email" name="email" required="true" class="caixas">
+              </div>
+              <div class="label">
+                <label for="texto">DÚVIDA</label>
+                <textarea id="texto" name="texto" placeholder="Digite sua mensagem" class="duvida" style="resize: none"></textarea>
+              </div>
+              <div class="label">
+                <input type="submit" value="ENVIAR" class="botao"> 
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </main>
 
