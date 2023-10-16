@@ -6,21 +6,23 @@ let mainTag = document.getElementsByTagName("main").item(0);
 let mainChildren = mainTag.children;
 let filtroAtivo = null;
 
+// Reseta as cores dos botoes da navbar para a cor original (primaria)
 const resetNavbarColor = () => {
   for(let i = 0; i < mainChildren.length; i++) {
     document.querySelector(`header .${mainChildren[i].id}`).style['color'] = `${primaryColor}`;
   }
 }
 
+// Esconde todas as paginas
 const resetDisplay = () => {
   for(let i = 0; i < mainChildren.length; i++) {
-    if(mainChildren[i].id !== 'elementName')
-      mainChildren[i].style['display'] = 'none';
+    mainChildren[i].style['display'] = 'none';      
   }
 
   window.scrollTo(0, 0);
 }
 
+// Implementa o listener em cada botao da navbar
 const addNavbarListener = (elementName, pageElem) => {
   let element = document.querySelector(`header .${elementName}`);
 
@@ -32,11 +34,13 @@ const addNavbarListener = (elementName, pageElem) => {
     resetDisplay();
     pageElem.style['display'] = 'flex';
 
+    // Esconde o menu lateral ao clicar
     let navBar = document.getElementsByTagName('nav').item(0);
 
     if(navBar.style['transform'] == 'translateX(0px)')
       navBar.style['transform'] = 'translateX(-500px)';
 
+    // Coloca a logo na Header caso a pagina aberta nao seja a Home
     let titleLogoHeader = document.querySelector('.titleLogoHeader');
     if(elementName !== 'Home') {
       titleLogoHeader.style['display'] = 'flex';
@@ -46,6 +50,8 @@ const addNavbarListener = (elementName, pageElem) => {
   });
 }
 
+// Esconde todas as paginas que nao sao a Home e adiciona um listener 
+// para cada botao na navbar associado
 for(let i = 0; i < mainChildren.length; i++) {
   if(mainChildren[i].id !== 'Home') {
     mainChildren[i].style['display'] = 'none';
@@ -54,7 +60,7 @@ for(let i = 0; i < mainChildren.length; i++) {
   addNavbarListener(mainChildren[i].id, mainChildren[i]);
 }
 
-
+// Implementa o abrir e fechar do menu lateral
 let openNavbar = document.querySelector('#openNavbar');
 openNavbar.addEventListener('click', () => {
   let navBar = document.getElementsByTagName('nav').item(0);
