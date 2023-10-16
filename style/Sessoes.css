@@ -1,0 +1,98 @@
+#Sessoes {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-image: url("../assets/old-paper-vertical.png");
+  background-repeat: no-repeat;
+  background-size: 850px 100%;
+  background-position: center top;
+  justify-content: center;
+  align-items: center;
+}
+
+#Sessoes .filtro-botoes {
+  width: 700px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid black;
+}
+
+#Sessoes .filtro-botao {
+  font-weight: bold;
+  font-family: BlackRose;
+  font-size: 26px;
+  background: transparent;
+  border: 2px solid black;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#Sessoes .filtro-botao.active {
+  background-color: var(--secondary-color);
+}
+
+#Sessoes .sessoesContainer {
+  width: 850px;
+  height: 80%;
+}
+
+#Sessoes .sessaoContainer {
+  margin: 0 70px;
+  border-bottom: 1px solid #000;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#Sessoes .sessaoContainer:last-child {
+  border-bottom: none;
+}
+
+#Sessoes .sessaoInfo {
+  font-size: 24px;
+  font-family: 'Kavivanar';
+  max-width: 400px;
+  word-wrap: break-word;
+}
+
+#Sessoes .fonteNegrito {
+  font-weight: bold;
+  font-family: BlackRose;
+  font-size: 26px;
+}
+
+@media (max-width: 720px) {
+  #Sessoes {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  #Sessoes .filtro-botoes {
+    width: 100%;
+  }
+
+  #Sessoes .filtro-botao {
+    font-size: 21px;
+  }
+
+  #Sessoes .sessaoContainer {
+    flex-direction: column-reverse;
+  }
+
+  #Sessoes .sessaoInfo {
+    font-size: 19px;
+  }
+  
+  #Sessoes .fonteNegrito {
+    font-size: 21px;
+  }
+  
+}
