@@ -12,13 +12,13 @@ const resetNavbarColor = () => {
   }
 }
 
-const resetDisplay = (addlistener) => {
+const resetDisplay = () => {
   for(let i = 0; i < mainChildren.length; i++) {
     if(mainChildren[i].id !== 'elementName')
       mainChildren[i].style['display'] = 'none';
-
-    if(addlistener !== undefined) addlistener(mainChildren[i].id, mainChildren[i]);
   }
+
+  window.scrollTo(0, 0);
 }
 
 const addNavbarListener = (elementName, pageElem) => {
