@@ -32,13 +32,13 @@
 
   #Agenda .Background {
     width: fit-content;
-    height: 2100px;
+    min-height: 2100px;
   
     z-index: 2;
   
     background-image: url("../assets/old-paper-vert.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
 
   
