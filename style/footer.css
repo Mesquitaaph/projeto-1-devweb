@@ -43,15 +43,8 @@ footer > div.footerColumn {
   filter: invert();
 }
 
-/* header > a {
-  cursor: pointer;
+@media (max-width: 690px) {
+  footer {
+    font-size: 12px;
+  }
 }
-
-header > a:hover {
-  color: var(--secondary-color);
-  transition: color .25s;
-}
-
-header > a#home {
-  color: var(--secondary-color);
-} */

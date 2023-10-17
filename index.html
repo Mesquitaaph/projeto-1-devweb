@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style/agenda.css">
 
     <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/Sessoes.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,12 +22,19 @@
 
   <body>
     <header>
-      <a class="Home">Home</a>
-      <a class="Palestrantes">Palestrantes</a>
-      <a class="Agenda">Agenda</a>
-      <a class="Sessoes">Sessões</a>
-      <a class="Ingressos">Ingressos</a>
-      <a class="FaleConosco">Fale Conosco</a>
+      <img id="openNavbar" src="assets/navbar-icon.svg" height="24" style="filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(334deg) brightness(102%) contrast(102%);">
+      <div class="titleLogoHeader">
+        <img src="assets/logos/caveirinha.png" height="80" alt="Caveira Logo">
+        <h1 class="title">SEMANA DA COMPUTACAO</h1>
+      </div>
+      <nav>
+        <a class="Home">Home</a>
+        <a class="Palestrantes">Palestrantes</a>
+        <a class="Agenda">Agenda</a>
+        <a class="Sessoes">Sessões</a>
+        <a class="Ingressos">Ingressos</a>
+        <a class="FaleConosco">Fale Conosco</a>
+      </nav>
     </header>
 
     <main>
@@ -44,27 +52,13 @@
           <br>
           Agora, os estudantes embarcam em uma jornada pelo mundo da computação em busca de sabedoria. A universidade entrou em uma Grande Semana da Computação!<br>
         </h2>
-
-        <!-- <div class="chamada">
-          <h2 class="textoChamada">
-            Conhecimento, inovação e oportunidade.<br>
-            Houve um evento que ofereceu tudo isso - A Semana da Computação na UFRJ.<br>
-            As palavras iniciais dos organizadores durante a abertura do evento motivaram estudantes e entusiastas da tecnologia de toda a universidade.<br>
-            <br>
-            “Experiência e expertise? Isso pode ser seu se você desejar! Se inscreva! Nós reunimos tudo neste único evento.”<br>
-            <br>
-            Agora, os estudantes embarcam em uma jornada pelo mundo da computação em busca de sabedoria. A universidade entrou em uma Grande Semana da Computação!<br>
-          </h2>
-          <img class="fundo" src="assets/old-paper.png" width="75%">
-        </div> -->
       </div>
 
-      <div id="Palestrantes">
-        <span style="color: var(--primary); font-family: BlackRose;">Palestrantes</span>
-      </div>
+    <div id="Palestrantes">
+      <span style="color: var(--primary); font-family: BlackRose;">Palestrantes</span>
+    </div>
 
-      <div id="Agenda">
-      <!-- <span style="color: var(--primary); font-family: BlackRose;"></span> -->
+    <div id="Agenda">
         <div class="titleLogo">
           <img src="assets/logos/caveirinha.png" height="140" alt="Caveira Logo">
           <h1 class="title">AGENDA</h1>
@@ -78,79 +72,152 @@
           <div class = "Evento"></div>
             <div class = "Eventinho">
               <h2>
-                <br> <br> <br> <br> Grande Abertura da Semana da Computação <br>
+                <br> <br> <br> <br> Inovações em Inteligência Artificial <br>
+                Palestrante: Raphael Mesquita <br>
                 Local: Roxinho CCMN <br>
-                10/03/24<br>
-                8-10h<br>
-                Teremos Open Table!<br><br>
+                Quinta-feira, 22/6<br>
+                9h30-10h30<br><br><br>
               </h2>
               <h2>
-                <br><br><br><br>Palestra 1: Como ser um mago do Lisp <br>
-                Palestrante: Manoel Gomes <br>
+                <br><br><br><br>Segurança Cibernética em um Mundo Conectado <br>
+                Palestrante: João David <br>
                 Local: F3-12 <br>
                 11/03/24<br>
                 10-12h<br><br>
               </h2>
               <h2>
-                <br><br><br>Palestra 2: Stand-up de programas inúteis <br>
-                Palestrante: Joe Biden <br>
+                <br><br><br>Desenvolvimento de Jogos: Da Ideia ao Mercado <br>
+                Palestrante: Giovanni Ornellas <br>
                 Local: Salão Nobre da Decania CCMN <br>
                 12/03/24<br>
                 13-15h<br><br>
               </h2>
               <h2>
-                <br><br><br><br>Oficina 1: Como consertar impressoras <br>
-                Palestrante: Freddie Mercury <br>
+                <br><br><br><br>Tecnologia e Saúde: Uma Parceria Vital <br>
+                Palestrante: Marcos Munhen <br>
                 Local: Roxinho CCMN <br>
                 13/03/24<br>
                 10-12h<br><br>
               </h2>
               <h2>
-                <br><br><br><br>Grande Encerramento da Semana da Computação <br>
+                <br><br><br><br>Blockchain e o Futuro das Finanças <br>
+                Palestrante: Pedro Von Zuben <br>
                 Local: Roxinho CCMN <br>
                 14/03/24<br>
-                10-12h<br>
-                O fim de uma Jornada<br><br>
+                10-12h<br><br><br>
               </h2>
-          </div>
-          <div class = "gambiarra"></div>
+            </div>
+            <div class = "gambiarra"></div>
+      </div>
+    </div>
+
+    <div id="Sessoes">
+      <div class="filtro-botoes">
+        <button id="filtroLocal1" class="filtro-botao">Local 1</button>
+        <button id="filtroLocal2" class="filtro-botao">Local 2</button>
+        <button id="filtroLocal3" class="filtro-botao">Local 3</button>
+      </div>
+      <div class="sessoesContainer">
+        <div class="sessaoContainer" sessao-lugar="Local1">
+          <h2 class="sessaoInfo">
+            <span class="fonteNegrito">Título:</span> Inovações em Inteligência Artificial
+            <br>
+            <span class="fonteNegrito">Dia:</span> Quinta-feira, 22/6.
+            <br>
+            <span class="fonteNegrito">Horário:</span> 9h30-10h30
+            <br>
+            <span class="fonteNegrito">Resumo:</span> Explore as mais recentes inovações em IA, desde machine learning
+            até redes neurais profundas, e saiba como elas estão moldando nosso futuro tecnológico.
+          </h2>
+          <img src="assets/Palestrante_Raphael.png" height="283" alt="Raphael Mesquita">
+        </div>
+        <div class="sessaoContainer" sessao-lugar="Local1">
+          <h2 class="sessaoInfo">
+            <span class="fonteNegrito">Título:</span> Segurança Cibernética em um Mundo Conectado
+            <br>
+            <span class="fonteNegrito">Dia:</span> Quinta-feira, 22/6.
+            <br>
+            <span class="fonteNegrito">Horário:</span> 10h30-11h30
+            <br>
+            <span class="fonteNegrito">Resumo:</span> Descubra as estratégias mais eficazes para proteger suas
+            informações em um mundo digitalmente interconectado, com foco em ameaças e soluções atuais.
+          </h2>
+          <img src="assets/Palestrante_Joao.png" height="283" alt="Joao David">
+        </div>
+        <div class="sessaoContainer" sessao-lugar="Local2">
+          <h2 class="sessaoInfo">
+            <span class="fonteNegrito">Título:</span> Desenvolvimento de Jogos: Da Ideia ao Mercado
+            <br>
+            <span class="fonteNegrito">Dia:</span> Quinta-feira, 22/6.
+            <br>
+            <span class="fonteNegrito">Horário:</span> 12h00-13h00
+            <br>
+            <span class="fonteNegrito">Resumo:</span> Aprenda os segredos do desenvolvimento de jogos, da concepção
+            inicial à comercialização bem-sucedida, com insights de desenvolvedores experientes.
+          </h2>
+          <img src="assets/Palestrante_Giovanni.png" height="283" alt="Giovanni Ornellas">
+        </div>
+        <div class="sessaoContainer" sessao-lugar="Local2">
+          <h2 class="sessaoInfo">
+            <span class="fonteNegrito">Título:</span> Tecnologia e Saúde: Uma Parceria Vital
+            <br>
+            <span class="fonteNegrito">Dia:</span> Quinta-feira, 22/6.
+            <br>
+            <span class="fonteNegrito">Horário:</span> 13h00-14h00
+            <br>
+            <span class="fonteNegrito">Resumo:</span> Explore como a tecnologia está revolucionando o setor de saúde,
+            desde telemedicina e registros eletrônicos de saúde até dispositivos médicos inovadores.
+          </h2>
+          <img src="assets/Palestrante_Marcos.png" height="283" alt="Marcos Munhen">
+        </div>
+        <div class="sessaoContainer" sessao-lugar="Local3">
+          <h2 class="sessaoInfo">
+            <span class="fonteNegrito">Título:</span> Blockchain e o Futuro das Finanças
+            <br>
+            <span class="fonteNegrito">Dia:</span> Quinta-feira, 22/6.
+            <br>
+            <span class="fonteNegrito">Horário:</span> 14h00-15h00
+            <br>
+            <span class="fonteNegrito">Resumo:</span> Descubra como o blockchain está transformando a indústria
+            financeira, incluindo criptomoedas, contratos inteligentes e muito mais, e o que isso significa para o seu
+            dinheiro.
+          </h2>
+          <img src="assets/Palestrante_Pedro.png" height="283" alt="Pedro Von Zuben">
         </div>
       </div>
+    </div>
 
-      <div id="Sessoes">
-        <span style="color: var(--primary); font-family: BlackRose;">Sessões</span>
-      </div>
+    <div id="Ingressos">
+      <span style="color: var(--primary); font-family: BlackRose;">Ingressos</span>
+    </div>
 
-      <div id="Ingressos">
-        <span style="color: var(--primary); font-family: BlackRose;">Ingressos</span>
-      </div>
+    <div id="FaleConosco">
+      <textarea></textarea>
+      <img src="./assets/dashed-rectangle.svg" height="160">
+      <span style="color: var(--primary); font-family: BlackRose;">Fale Conosco</span>
+    </div>
+  </main>
 
-      <div id="FaleConosco">
-        <textarea ></textarea>
-        <img src="./assets/dashed-rectangle.svg" height="160">
-        <span style="color: var(--primary); font-family: BlackRose;">Fale Conosco</span>
-      </div>
-    </main>
+  <footer>
+    <div class="footerColumn">
+      <a class="socialMedia" href="https://www.instagram.com/semanadacomputacaoufrj/">
+        <img src="assets/logos/instagram_logo.png" height="20">
+        <span>Instagram</span>
+      </a>
 
-    <footer>
-      <div class="footerColumn">
-        <a class="socialMedia" href="https://www.instagram.com/semanadacomputacaoufrj/">
-          <img src="assets/logos/instagram_logo.png" height="20">
-          <span>Instagram</span>
-        </a>
+      <a class="socialMedia" href="https://www.facebook.com/SemanaDaComputacaoUFRJ/">
+        <img src="assets/logos/instagram_logo.png" height="20">
+        <span>Facebook</span>
+      </a>
+    </div>
 
-        <a class="socialMedia" href="https://www.facebook.com/SemanaDaComputacaoUFRJ/">
-          <img src="assets/logos/instagram_logo.png" height="20">
-          <span>Facebook</span>
-        </a>
-      </div>
+    <div class="footerColumn">
+      <p>Endereço: <br>Universidade Federal do Rio de Janeiro</p>
+      <p>Contato: <br>semanadacomputacaoufrj@gmail.com</p>
+    </div>
+  </footer>
+</body>
 
-      <div class="footerColumn">
-        <p>Endereço: <br>Universidade Federal do Rio de Janeiro</p>
-        <p>Contato: <br>semanadacomputacaoufrj@gmail.com</p>
-      </div>
-    </footer>
-  </body>
+<script src="script.js"></script>
 
-  <script src="script.js"></script>
 </html>
